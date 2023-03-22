@@ -249,7 +249,7 @@ h2 {
     height: 100%;
     opacity: 0.4;
     background-color: #000000;
-    backdrop-filter: blur(2px);
+    filter: blur(2px);
     z-index: -1;
 }
 
