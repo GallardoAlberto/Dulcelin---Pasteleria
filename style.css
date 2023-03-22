@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    list-style-type: none;
+    text-decoration: none;
+    /* border-style: solid; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #c9864349;
+}
+
+.logoFijo{
+    background-color: white;
+    transition: 0.8s;
+    width: 120px;
+    z-index: 2;
+    position: fixed;
+}
+h2 {
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+    font-size: 50px;
+    background: rgba(201, 134, 67, 0.815);
+    color: white;
+    text-shadow: 1px 0px 3px black, -1px 0px 3px black, 0px 1px 3px black, 0px -1px 3px black
+}
+
+/* FLECHA PARA SUBIR AL INICIO */
+
+.flechaArriba {
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    right: -80px;
+    font-size: 30px;
+    background-color: #2F2719;
+    padding: 12px 15px;
+    color: white;
+    border-radius: 7px;
+    transition: 0.4s;
+    cursor: pointer;
+    box-shadow: inset 0px -5px 1px 1px #573a1d,
+        0px 3px 1px 1px black,
+        0px -1px 1px 1px black;
+    z-index: 10;
+}
+
+.flechaArriba:active {
+    box-shadow: inset 0px 4px 1px 1px #573a1d;
+}
+
+.flechaArriba:hover {
+    transform: translateY(-5px);
+}
+
+
+
+/* PAGINA DE INICIO */
+
+.inicio {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.inicio--logo {
+    margin-bottom: 100px;
+}
+
+.inicio--menu {
+    transition: 0.4;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #2F2719;
+    z-index: 1;
+}
+
+.inicio--menu ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inicio--menu ul li {
+    padding: 30px 0;
+
+}
+
+.inicio--menu ul li a {
+    /* box-shadow: 0px 5px 6px 0px black; */
+    margin: 0 30px;
+    font-size: 22px;
+    padding: 15px;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.inicio--menu ul li a:hover {
+    color: #dd8c56;
+}
+
+
+.inicio--menu ul li a:hover {
+    width: 200px;
+}
+
+/* PAGINA SOBRE MI */
+
+.sobreMi {
+    z-index: -1;
+    background-color: white;
+    padding: 200px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.sobreMi--imagenes {
+    width: 30%;
+    display: grid;
+    place-items: center;
+}
+
+.sobreMi img {
+    margin: 20px 0;
+    width: 350px;
+    border-radius: 50%;
+}
+
+.sobreMi--descripcion {
+    padding: 0 50px;
+    width: 45%;
+    text-align: center;
+}
+
+.sobreMi--descripcion p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    line-height: 34px;
+    font-weight: 300;
+}
+
+.sobreMi--descripcion p b {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+/* SLIDER DE LAS MITADES */
+
+.slider {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 60s linear infinite;
+    -webkit-animation: scroll 60s linear infinite;
+    width: calc(500px * 12);
+}
+
+.slider .slide {
+    width: 500px;
+    height: 400px;
+}
+
+.slider .slide img {
+    padding: 10px 5px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(calc(-200px * 6));
+        transform: translateX(calc(-200px * 6));
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+/* PAGINA DE TARTAS */
+
+.tartas {
+    padding: 100px 10%;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+
+.tartas div {
+    -webkit-box-shadow: 0px 0px 40px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 40px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 40px -8px rgba(0, 0, 0, 0.75);
+    position: relative;
+    transition: 0.4s;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    height: 200px;
+    margin: 50px 0;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+}
+
+.tartas div:hover {
+    transform: scale(1.025);
+}
+
+.tartas div:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: #000000;
+    backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+.tartas div img {
+    border-radius: 50%;
+    margin: 20px 0;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tartas div p {
+    transition: 0.4s;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 5px 0;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 0px 3px black, -1px 0px 3px black, 0px 1px 3px black, 0px -1px 3px black;
+    opacity: 0;
+}
+
+.tartas div:hover p {
+    opacity: 1;
+}
+
+.tartas div p:nth-child(1) {
+    font-size: 25px;
+}
+
+
+/* PAGINA DE cookies */
+
+.cookies {
+    padding: 100px 10%;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+
+.cookies div {
+    -webkit-box-shadow: 0px 0px 40px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 40px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 40px -8px rgba(0, 0, 0, 0.75);
+    position: relative;
+    transition: 0.4s;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    height: 200px;
+    margin: 50px 0;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+}
+
+.cookies div:hover {
+    transform: scale(1.025);
+}
+
+.cookies div:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: #000000;
+    backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+.cookies div img {
+    border-radius: 50%;
+    margin: 20px 0;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.cookies div p {
+    transition: 0.4s;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 5px 0;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 0px 3px black, -1px 0px 3px black, 0px 1px 3px black, 0px -1px 3px black;
+    opacity: 0;
+}
+
+.cookies div:hover p {
+    opacity: 1;
+}
+
+.cookies div p:nth-child(1) {
+    font-size: 25px;
+}
+
+
+/* PAGINA DEL CONTACTO */
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto div {
+    width: 200px;
+    border-radius: 20px;
+    margin: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: #C98543;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    box-shadow: inset 0px -5px 1px 1px #573a1d,
+        0px 3px 1px 1px black,
+        0px -1px 1px 1px black;
+}
+
+.contacto div:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.contacto div:active {
+    background-color: #c48343;
+    transition: 0.1s;
+    box-shadow: inset 0px 4px 1px 1px #573a1d;
+}
+
+.contacto div i {
+    padding: 0 10px;
+    font-size: 40px;
+}
+
+.menuMovil{
+    right: -80px;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: #2F2719;
+    padding: 12px 15px;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.6s;
+    position: fixed;
+    top: 50px;
+    box-shadow: inset 0px -5px 1px 1px #573a1d,
+    0px 3px 1px 1px black,
+    0px -1px 1px 1px black;
+}
+
+.menuMovil:active {
+    box-shadow: inset 0px 4px 1px 1px #573a1d;
+}
+
+@media (max-width: 1330px) {
+
+    /* PAGINA DE INICIO */
+    
+    /* .inicio--menu ul li a {
+        margin: 0 20px;
+        font-size: 18px;
+        padding: 15px;
+        color: #ffffff;
+    } */
+    
+    /* PAGINA SOBRE MI */
+
+    .sobreMi {
+        display: block;
+    }
+
+    .sobreMi--imagenes {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .sobreMi--descripcion {
+        margin: 60px auto 0 auto;
+        padding: 0 100px;
+        box-sizing: border-box;
+        width: 80%;
+    }
+
+    /* PAGINA DE TARTAS */
+    .tartas {
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    }
+
+    .tartas div{
+        width: 250px;
+        height: 200px;
+    }
+
+    /* PAGINA DE COOKIES */
+    .cookies {
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    }
+
+    .cookies div{
+        width: 250px;
+        height: 200px;
+    }
+    
+}
+
+@media (max-width: 925px) {
+
+    .inicio--logo {
+        width: 200px;
+    }
+
+    .inicio--menu{
+        padding: 0%;
+    }
+    .inicio--menu ul{
+        display: block;
+        text-align: center;
+    }
+    .inicio--menu ul li{
+        padding: 30px;
+    }
+
+    .sobreMi--imagenes img {
+        width: 250px;
+    }
+
+    .sobreMi--descripcion {
+        padding: 0 20px;
+    }
+
+    .tartas {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .cookies {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .tartas div {
+        width: 400px;
+    }
+
+    .cookies div {
+        width: 400px;
+    }
+}
+
+@media (max-width: 668px) {
+    .slider .slide {
+        width: 300px;
+        height: 300px;
+    }
+
+    
+    .contacto{
+        display: block;
+    }
+    
+    .contacto div{
+        margin: 40px auto;
+
+    }
+}
+@media (max-width: 540px) {
+
+    .tartas div {
+        width: 250px;
+    }
+    
+    .cookies div {
+        width: 250px;
+    }
+}
+

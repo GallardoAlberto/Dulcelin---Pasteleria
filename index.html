@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <i class="flechaArriba fa-solid fa-arrow-up"></i>
+
+    <div class="inicio finisher-header">
+        <img class="inicio--logo" data-aos="fade-down" data-aos-duration="2000" src="multimedia/logos/logo.png" alt="">
+        <nav class="inicio--menu">
+            <ul>
+                <li><a href="#">Inicio</i></a></li>
+                <li><a href="#sobreMi">Sobre mí</i></a></li>
+                <li><a href="#tartas">Tartas</i></a></li>
+                <li><a href="#cookies">Cookies</i></a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <img src="multimedia/logos/logo.png" class="logoFijo" alt="">
+    
+    <div class="sobreMi" id="sobreMi">
+        <i class="menuMovil fa-solid fa-bars"></i>
+        <div class="sobreMi--imagenes">
+            <img src="multimedia/logos/image3.png" alt="">
+            <img data-aos="fade-right" data-aos-duration="1000" src="multimedia/miri.png" alt="miri">
+        </div>
+        <div class="sobreMi--descripcion">
+            <p>
+                Me presento, mi nombre es Miriam y tengo 24
+                años. Estudié pastelería y panadería hace 4 años y desde entonces,
+                mi vida cambió completamente. Descubrí la felicidad que me brinda
+                hacer lo que realmente me gusta y <b>la pastelería sin duda alguna es
+                mi pasión.</b> Quiero compartir con vosotros la historia detrás de
+                Dulcelín.
+                
+                <br><br>
+                Después de terminar mis estudios, trabajé en diferentes
+                obradores pero siempre acababa teniendo que dejar mi trabajo.
+                Entonces,<b> decidí tomar las riendas de mi vida </b> y empecé a hacer
+                pruebas en casa. Después de mucho trabajo y esfuerzo, logré crear
+                mis propias recetas y así nació <b>DULCELÍN</b>. 
+                
+                <br><br>
+                Crear una empresa <b>desde cero no es fácil</b>, especialmente en medio de una pandemia. A veces,
+                consideré abandonar el proyecto pero siempre conté con el apoyo de
+                mi familia y mi pareja, quien es el encargado de la parte salada de
+                Dulcelín. Juntos, nos superamos día a día y seguimos luchando por
+                nuestro sueño que poco a poco se está haciendo realidad gracias a
+                vosotros. <b>Me siento orgullosa de lo que estoy haciendo y esto me ha
+                enseñado que, con trabajo duro y esfuerzo, se puede lograr cualquier
+                cosa que realmente se desea.</b>
+              </p>
+        </div>
+    </div>
+
+    <h2>TARTAS</h2>
+    <div class="tartas" id="tartas"></div>
+
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="multimedia/mitad/imagen1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="multimedia/mitad/imagen2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="multimedia/mitad/imagen3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="multimedia/mitad/imagen4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="multimedia/mitad/imagen5.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="multimedia/mitad/imagen6.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="multimedia/mitad/imagen1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="multimedia/mitad/imagen2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="multimedia/mitad/imagen3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="multimedia/mitad/imagen4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="multimedia/mitad/imagen5.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="multimedia/mitad/imagen6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <h2>COOKIES</h2>
+    <div class="cookies" id="cookies"></div>
+
+    <div class="contacto" id="contacto">
+        <div class="contacto--whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <p>+34 626 47 66 25</p>
+        </div>
+
+        <div class="contacto--instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <p>dulcelinnn</p>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/c98f52caa2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/finisher-header.es5.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        new FinisherHeader({
+          "count": 26,
+          "size": {
+            "min": 1,
+            "max": 9,
+            "pulse": 0
+          },
+          "speed": {
+            "x": {
+              "min": 0,
+              "max": 1
+            },
+            "y": {
+              "min": 0,
+              "max": 0.6
+            }
+          },
+          "colors": {
+            "background": "#edd28a",
+            "particles": [
+              "#ffffff",
+              "#2f2719",
+              "#c98543"
+            ]
+          },
+          "blending": "lighten",
+          "opacity": {
+            "center": 1,
+            "edge": 0
+          },
+          "skew": 0,
+          "shapes": [
+            "c"
+          ]
+        });
+    </script>
+
+    <script>
+        AOS.init();
+      </script>
+
+    <script src="js/tartas.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/redes.js"></script>
+    <script src="js/subir.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
