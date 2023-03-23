@@ -25,6 +25,7 @@ document.addEventListener("scroll", () =>{
             menuMovil.style.right = "20px";
             logo.style.top = "0px";
             logo.style.left = "0px";
+            cajaMovil.style.position = "fixed";
             cajaMovil.style.top = "0px";
             menuMovil.style.top = "20px";
 
@@ -39,8 +40,15 @@ document.addEventListener("scroll", () =>{
     }else{
         menuMovil.classList.remove("fa-xmark");
         menuMovil.classList.add("fa-bars");
-        menuMovil.style.backgroundColor = "#2F2719";
-        menuMovil.style.boxShadow = "inset 0px -5px 1px 1px #573a1d, 0px 3px 1px 1px black, 0px -1px 1px 1px black";
+
+        if(window.innerWidth <= 540){
+            menuMovil.style.backgroundColor = "transparent";
+            menuMovil.style.boxShadow = "none";
+        }else{
+            menuMovil.style.backgroundColor = "#2F2719";
+            menuMovil.style.boxShadow = "inset 0px -5px 1px 1px #573a1d, 0px 3px 1px 1px black, 0px -1px 1px 1px black";        
+        }
+        
         cajaMenu.style.opacity = "1";
         cajaMenu.style.position = "static";
         cajaMenu.style.width = "100%";
