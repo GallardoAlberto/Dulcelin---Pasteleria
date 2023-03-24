@@ -3,7 +3,16 @@ let menu = cajaMenu.querySelector("ul");
 let menuMovil = document.querySelector(".menuMovil");
 let logo = document.querySelector(".logoFijo");
 let cajaMovil = document.querySelector(".inicioMovil");
+let apartados = menu.querySelectorAll("li");
+
 let clickMenu = false;
+
+if(window.innerWidth > 540){
+    cajaMovil.style.display = "none";
+}else{
+    cajaMovil.style.display = "block";
+
+}
 
 document.addEventListener("scroll", () =>{
 
@@ -22,24 +31,39 @@ document.addEventListener("scroll", () =>{
         }
         
         if(window.innerWidth <= 540){
+            menuMovil.style.top = "20px";
             menuMovil.style.right = "20px";
+
             logo.style.top = "0px";
             logo.style.left = "0px";
+
             cajaMovil.style.position = "fixed";
             cajaMovil.style.top = "0px";
-            menuMovil.style.top = "20px";
 
         }else{
+
+            menuMovil.style.top = "50px";
+
             logo.style.top = "30px";
             logo.style.left = "0px";
-            menuMovil.style.top = "50px";
 
         }
 
 
     }else{
+
+        for (let i = 0; i < apartados.length; i++) {
+            apartados[i].style.backgroundColor = "#573a1d";
+        }
+
         menuMovil.classList.remove("fa-xmark");
         menuMovil.classList.add("fa-bars");
+
+        if(window.innerWidth <= 926){
+            cajaMenu.style.backgroundColor = "transparent";
+        }else{
+            cajaMenu.style.backgroundColor = "#573a1d";
+        }
 
         if(window.innerWidth <= 540){
             menuMovil.style.backgroundColor = "transparent";
@@ -49,24 +73,32 @@ document.addEventListener("scroll", () =>{
             menuMovil.style.boxShadow = "inset 0px -5px 1px 1px #573a1d, 0px 3px 1px 1px black, 0px -1px 1px 1px black";        
         }
         
+        menuMovil.style.right = "-80px";
+
         cajaMenu.style.opacity = "1";
         cajaMenu.style.position = "static";
         cajaMenu.style.width = "100%";
         cajaMenu.style.height = "100%";
-        cajaMenu.style.backgroundColor = "#2F2719";
-        menu.style.position = "static";
-        menuMovil.style.right = "-80px";
-        menu.style.justifyContent = "center";
-        logo.style.left = "-120px";
-        clickMenu = false;
-        cajaMovil.style.top = "-100px";
 
+        menu.style.position = "static";
+        menu.style.justifyContent = "center";
+
+        logo.style.left = "-120px";
+
+        clickMenu = false;
+
+        cajaMovil.style.top = "-100px";
     }
 })
 
 menuMovil.addEventListener("click" , () =>{
 
     if(clickMenu == false){
+
+        for (let i = 0; i < apartados.length; i++) {
+            apartados[i].style.backgroundColor = "transparent";
+        }
+
         if(window.innerWidth <= 540){
             cajaMenu.style.width = "100%";
             menuMovil.style.right = "20px";
@@ -96,6 +128,7 @@ menuMovil.addEventListener("click" , () =>{
             menuMovil.style.boxShadow = "inset 0px -5px 1px 1px #573a1d, 0px 3px 1px 1px black, 0px -1px 1px 1px black";
             menuMovil.style.backgroundColor = "#2F2719";
         }        
+
         menuMovil.classList.remove("fa-xmark");
         menuMovil.classList.add("fa-bars");
         cajaMenu.style.opacity = "1";

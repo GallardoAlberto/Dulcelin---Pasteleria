@@ -89,7 +89,7 @@ h2 {
     padding: 10px;
     box-sizing: border-box;
     width: 100%;
-    background-color: #2F2719;
+    background-color: #573a1d;
     z-index: 1;
 }
 
@@ -101,7 +101,6 @@ h2 {
 
 .inicio--menu ul li {
     padding: 30px 0;
-
 }
 
 .inicio--menu ul li a {
@@ -409,6 +408,8 @@ h2 {
     transition: 0.6s;
     position: fixed;
     top: 18px;
+    background-color: #2F2719;
+    box-shadow: inset 0px -5px 1px 1px #573a1d, 0px 3px 1px 1px black, 0px -1px 1px 1px black;        
 }
 
 .menuMovil:active {
@@ -474,15 +475,22 @@ h2 {
 
     .inicio--menu{
         padding: 0%;
+        background-color: transparent;
+
     }
     .inicio--menu ul{
         display: block;
         text-align: center;
     }
     .inicio--menu ul li{
-        padding: 30px;
+        background-color: #573a1d;
+        padding: 10px 5px;
+        margin: 10px;
+        border-radius: 10px;
     }
-
+    .inicio--menu ul li a{
+        font-size: 20px;
+    }
     .sobreMi--imagenes img {
         width: 250px;
     }
@@ -532,19 +540,25 @@ h2 {
         background-color: transparent;
     }
 
+    .flechaArriba{
+        font-size: 24px;
+    }
+
     .menuMovil{
         background-color: transparent;
+        color : #2F2719;
     }
 
     .inicioMovil{
         display: block;
         top: -200px;
         position: fixed;
-        background: rgb(87,58,29);
-        background: linear-gradient(270deg, rgba(87,58,29,1) 0%, rgba(237,210,138,1) 55%);        
+        background: rgba(237,210,138,1);
+        /* background: linear-gradient(270deg, rgba(87,58,29,1) 0%, rgba(237,210,138,1) 55%);         */
         z-index: 2;
         box-shadow: 0px 0px 7px 5px black;
     }
+
     .tartas div {
         width: 250px;
     }
