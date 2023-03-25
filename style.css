@@ -355,6 +355,65 @@ h2 {
     font-size: 25px;
 }
 
+/* PAGINA DE TESTIMONIOS */
+
+.cajaTestimonios{
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    height: 80vh;
+}
+
+.cajaTestimonios .flechaIzq, .flechaDer{
+    font-size: 23px;
+    border-radius: 50%;
+    color: white;
+    background-color: #2F2719;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.cajaTestimonios .flechaIzq:hover, .flechaDer:hover{
+    transform: scale(1.4);
+    background-color: rgb(250, 146, 76);
+}
+
+.cajaTestimonios .flechaIzq:active, .flechaDer:active{
+    transform: scale(1);
+    background-color: rgb(212, 126, 69);
+}
+
+.testimonio{
+    transition: 0.4s;
+    padding: 50px;
+    box-sizing: border-box;
+    margin: 100px auto;
+    width: 70%;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+}
+
+.testimonio i{
+    color: rgb(224, 190, 38);
+    text-shadow: 0px 0px 1px black;
+    padding: 3px;
+}
+.italic{
+    color: #000000 !important;
+    font-weight: 500;
+}
+.testimonio img{
+    padding: 20px 0;
+}
+.testimonio h3{
+    font-size: 30px;
+    padding: 20px 0;
+}
+.testimonio p{
+    line-height: 25px;
+    font-size: 18px;
+}
 
 /* PAGINA DEL CONTACTO */
 
@@ -464,7 +523,7 @@ h2 {
         width: 250px;
         height: 200px;
     }
-    
+
 }
 
 @media (max-width: 925px) {
@@ -514,6 +573,26 @@ h2 {
     .cookies div {
         width: 400px;
     }
+
+    .cajaTestimonios{
+        padding: 0 50px;
+    }
+    
+    .testimonio{
+        padding: 0px;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .testimonio h3{
+        font-size: 25px;
+        padding: 20px 0;
+    }
+    .testimonio p{
+        line-height: 25px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 668px) {
@@ -522,7 +601,23 @@ h2 {
         height: 300px;
     }
 
-    
+    .cajaTestimonios{
+        height: 90vh;
+        margin-bottom: 80px;
+    }
+
+    .cajaTestimonios .flechaIzq{
+        position: relative;
+        top: 350px;
+        left: 35%;
+    }
+
+    .cajaTestimonios .flechaDer{
+        position: relative;
+        top: 350px;
+        right: 35%;
+    }
+
     .contacto{
         display: block;
     }
@@ -531,6 +626,8 @@ h2 {
         margin: 40px auto;
 
     }
+
+
 }
 @media (max-width: 540px) {
 
@@ -565,6 +662,22 @@ h2 {
     
     .cookies div {
         width: 250px;
+    }
+
+    .cajaTestimonios{
+        padding: 0%;
+    }
+
+    .cajaTestimonios .flechaIzq{
+        left: 30%;
+    }
+
+    .cajaTestimonios .flechaDer{
+        right: 30%;
+    }
+
+    .testimonio{
+        padding: 0px;
     }
 }
 

@@ -7,6 +7,8 @@ let apartados = menu.querySelectorAll("li");
 
 let clickMenu = false;
 
+// desaparece la barra del menu del movil si es menor de 540px
+
 if(window.innerWidth > 540){
     cajaMovil.style.display = "none";
 }else{
@@ -16,8 +18,11 @@ if(window.innerWidth > 540){
 
 document.addEventListener("scroll", () =>{
 
+    // vemos que al hacer scroll, al pasar la primera hoja
+
     if(window.scrollY >= window.innerHeight){
 
+        // vemos si hemos abierto o no el menu para darle mas o menos espacio a la derecha al menu
         if(clickMenu == false){
 
             if(window.innerWidth <= 540){
@@ -29,7 +34,9 @@ document.addEventListener("scroll", () =>{
         }else{
             menuMovil.style.right = "123px";
         }
-        
+
+        // si el menu NO fuera movil
+
         if(window.innerWidth <= 540){
             menuMovil.style.top = "20px";
             menuMovil.style.right = "20px";
@@ -52,6 +59,7 @@ document.addEventListener("scroll", () =>{
 
     }else{
 
+        // cambiamos el color a cada li del menu
         for (let i = 0; i < apartados.length; i++) {
             apartados[i].style.backgroundColor = "#573a1d";
         }
@@ -59,11 +67,14 @@ document.addEventListener("scroll", () =>{
         menuMovil.classList.remove("fa-xmark");
         menuMovil.classList.add("fa-bars");
 
+        // Quitamos o ponemos el fondo al menu, si es movil se quita, sino se le pone al largo de PC
         if(window.innerWidth <= 926){
             cajaMenu.style.backgroundColor = "transparent";
         }else{
             cajaMenu.style.backgroundColor = "#573a1d";
         }
+
+        // si el menu NO fuera movil
 
         if(window.innerWidth <= 540){
             menuMovil.style.backgroundColor = "transparent";
@@ -73,6 +84,8 @@ document.addEventListener("scroll", () =>{
             menuMovil.style.boxShadow = "inset 0px -5px 1px 1px #573a1d, 0px 3px 1px 1px black, 0px -1px 1px 1px black";        
         }
         
+        // si el scroll se mantiene en la primera hoja, siempre pasara esto
+
         menuMovil.style.right = "-80px";
 
         cajaMenu.style.opacity = "1";
@@ -143,5 +156,4 @@ menuMovil.addEventListener("click" , () =>{
         clickMenu = false;
     }
     
-
 });
